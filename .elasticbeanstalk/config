@@ -1,0 +1,14 @@
+[global]
+ApplicationName=amazon_test
+AwsCredentialFile=c:\Ruby\MRI\home\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.us-east-1.amazonaws.com
+EnvironmentName=amazontest-env
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=SingleInstance
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\Ruby\aws\amazon_test\.elasticbeanstalk\optionsettings.amazontest-env
+RdsEnabled=No
+Region=us-east-1
+ServiceEndpoint=https://elasticbeanstalk.us-east-1.amazonaws.com
+SolutionStack=64bit Amazon Linux 2015.03 v2.0.0 running Ruby 2.1 (Puma)
+
