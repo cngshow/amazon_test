@@ -5,7 +5,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: amazon_test_development
+      database: heroku_dev
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -126,9 +126,19 @@ development:
 test:
   clients:
     default:
-      database: amazon_test_test
+      database: heroku_test
       hosts:
         - localhost:27017
+      options:
+        read:
+          mode: primary
+        max_pool_size: 1
+
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGOLAB_URI']%>
       options:
         read:
           mode: primary
