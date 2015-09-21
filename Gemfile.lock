@@ -37,12 +37,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    aws-sdk (2.1.20)
-      aws-sdk-resources (= 2.1.20)
-    aws-sdk-core (2.1.20)
-      jmespath (~> 1.0)
-    aws-sdk-resources (2.1.20)
-      aws-sdk-core (= 2.1.20)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bson (3.2.4)
@@ -64,8 +58,6 @@ GEM
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jmespath (1.0.2)
-      multi_json (~> 1.0)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -89,6 +81,7 @@ GEM
     nokogiri (1.6.6.2-x64-mingw32)
       mini_portile (~> 0.6.0)
     origin (2.1.1)
+    puma (2.14.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -156,12 +149,12 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  aws-sdk (~> 2)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
   mongoid (~> 5.0.0)
+  puma
   rails (= 4.2.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
