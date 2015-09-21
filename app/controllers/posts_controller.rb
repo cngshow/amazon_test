@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def welcome
+    render file: Rails.public_path.join("","index.html"), layout: true #
+  end
+
   # GET /posts
   # GET /posts.json
   def index
