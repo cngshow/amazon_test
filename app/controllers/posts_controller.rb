@@ -8,7 +8,21 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    puts "In the Posts controller"
+    begin
+      @posts = Post.all
+    rescue => ex
+      puts ex.backtrace.join("\n")
+    ensure
+      begin
+        puts "All done!!!"
+        puts " We have " + @posts.length.to_s
+      rescue =>ex2
+        puts ex2.backtrace.join("\n")
+        puts "-----"
+        puts ex2.to_s
+      end
+    end
   end
 
   # GET /posts/1
